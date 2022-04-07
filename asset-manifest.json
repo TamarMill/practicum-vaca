@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/practicum-vacation/static/css/main.073c9b0a.css",
+    "main.js": "/practicum-vacation/static/js/main.0e61a13d.js",
+    "static/js/787.f126219a.chunk.js": "/practicum-vacation/static/js/787.f126219a.chunk.js",
+    "static/media/logo.svg": "/practicum-vacation/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/practicum-vacation/index.html",
+    "main.073c9b0a.css.map": "/practicum-vacation/static/css/main.073c9b0a.css.map",
+    "main.0e61a13d.js.map": "/practicum-vacation/static/js/main.0e61a13d.js.map",
+    "787.f126219a.chunk.js.map": "/practicum-vacation/static/js/787.f126219a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.0e61a13d.js"
+  ]
+}
