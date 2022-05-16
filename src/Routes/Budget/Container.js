@@ -24,6 +24,7 @@ function Container() {
             }]
         })
         setBudgetName('');
+        setMaxBudget('');
     }
 
     function renderBudgetItem(budget) {
@@ -39,6 +40,7 @@ function Container() {
             chosenBudget.expenses.push(expense)
         })
         setBudgets(newBudgets);
+        setExpense('');
 
     }
     console.log(budgets);
@@ -63,19 +65,9 @@ function Container() {
                     variant="contained">Add Budget
                 </Button>
 
-                <TextField
-                    placeholder='Expense'
-                    onChange={e => setExpense(e.target.value)}
-                    value={expense} id="outlined-basic"
-                    variant="outlined"
-                />
 
-                <Button
-                    onClick={addExpense}
-                    variant="contained">Add Expense
-                </Button>
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Choose Category</InputLabel>
+                    <InputLabel id="demo-simple-select-label">Choose Budget Category</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -88,6 +80,17 @@ function Container() {
 
                     </Select>
                 </FormControl>
+                <TextField
+                    placeholder='Expense Amount'
+                    onChange={e => setExpense(e.target.value)}
+                    value={expense} id="outlined-basic"
+                    variant="outlined"
+                />
+                <Button
+
+                    onClick={addExpense}
+                    variant="contained">Add Expense
+                </Button>
 
             </div>
             {budgets.map(renderBudgetItem)}

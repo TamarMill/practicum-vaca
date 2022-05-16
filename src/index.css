@@ -19,7 +19,7 @@ code {
   padding-left: 15px;
 }
 .note {
-  background-color: #fe8ad7;
+  background-color: #f5d5b1;
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
@@ -38,10 +38,10 @@ code {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .note.new {
-  background-color: #f5d5b1;
+  background-color: #f3cbe6;
 }
 textarea {
-  background-color: #f5d5b1;
+  background-color: #f3cbe6;
   border: none;
   resize: none;
 }
@@ -75,4 +75,8 @@ textarea:focus {
 }
 .search input:focus {
   outline: none;
+}
+#header > link {
+  background-color: aqua;
+  color: aqua;
 }

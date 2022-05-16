@@ -13,10 +13,11 @@ const App = () => {
 
 
     <BrowserRouter>
-      <Link to='/notes'>Notes</Link>
-      <Link to='/budget'>Budget Calculator</Link>
+
+      <Link to='/notes'>Notes  </Link>
+      <Link to='/budget'>Budget Calculator  </Link>
       <Link to='/map'>Map</Link>
-      <Routes>
+      <Routes >
         <Route path='/notes' element={<NotesContainer />} />
         <Route path='/budget' element={<BudgetContainer />} />
         <Route path='/map' element={<MapContainer />} />
