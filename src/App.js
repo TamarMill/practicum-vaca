@@ -3,6 +3,10 @@ import { Container as NotesContainer } from './Routes/Notes/Container';
 import { Container as BudgetContainer } from './Routes/Budget/Container';
 import { Container as MapContainer } from './Routes/Map/Container';
 import { useReducer, createContext } from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 import immer from 'immer';
 
@@ -49,13 +53,22 @@ const App = () => {
   return (
 
     <Appcontext.Provider value={{ state, dispatch }}>
-      <BrowserRouter>
 
-        <Link to='/notes'>Notes  </Link>
-        <Link to='/budget'>Budget Calculator  </Link>
-        <Link to='/map'>Map</Link>
+
+
+      <BrowserRouter>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Tabs style={{ backgroundColor: 'white' }} aria-label="basic tabs example">
+            <Link to='/'><Tab label='Notes' />  </Link>
+            <Link to='/budget'><Tab label='Budget Calculator' /> </Link>
+            <Link to='/map'><Tab label='Map' /></Link>
+          </Tabs>
+        </Box>
+
+
         <Routes >
-          <Route path='/notes' element={<NotesContainer />} />
+
+          <Route path='/' element={<NotesContainer />} />
           <Route path='/budget' element={<BudgetContainer />} />
           <Route path='/map' element={<MapContainer />} />
 

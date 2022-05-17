@@ -13,6 +13,7 @@ import { useRef, useState } from 'react';
 import { AttractionsFilter } from "./AttractionsFilter";
 import { InfoWindow } from '@react-google-maps/api';
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 const center = { lat: 37.1, lng: -95.7 }
 function Map() {
     const navigate = useNavigate();
@@ -48,8 +49,11 @@ function Map() {
 
     function renderCityOptions(city) {
         return (
-            <div onClick={() => handleSelect(city.description)}>
-                {city.description}
+            <div>
+
+                <Button variant="outlined" onClick={() => handleSelect(city.description)}>
+                    {city.description}
+                </Button>
             </div>
         )
     }
@@ -76,10 +80,23 @@ function Map() {
         )
     }
     return (
-        <div>
-            <TextField value={value} onChange={e => setValue(e.target.value)} />
-            {filterCities.map(renderCityOptions)}
-            <div style={{ height: 500, width: 500 }}>
+        <div >
+            <div style={{ backgroundColor: '#f3cbe6', padding: '5%', margin: '5%' }}>
+                <h5>Search for and Select a Location</h5>
+
+                <TextField value={value} onChange={e => setValue(e.target.value)} />
+
+                {filterCities.map(renderCityOptions)}
+                <div></div>
+                <AttractionsFilter
+
+                    setCoordinates={setCoordinates}
+                    handleTypeSelect={handleRadioChange}
+                    types={type}
+                    chosenCity={chosenCity}
+                />
+            </div>
+            <div style={{ height: 500, width: 500, marginLeft: '20%' }}>
                 <GoogleMap
                     onLoad={googleMap => map.current = googleMap}
                     mapContainerClassName='map-container'
@@ -89,18 +106,13 @@ function Map() {
                     {locationInfoCoordinate && <InfoWindow onCloseClick={handleInfoWindowClose} position={locationInfoCoordinate}>
                         <div>
                             <p>{locationInfo}</p>
-                            <button onClick={() => navigate('/notes')}>Add Note</button>
+                            <button onClick={() => navigate('/')}>Add Note</button>
                         </div>
                     </InfoWindow>}
                 </GoogleMap>
 
             </div>
-            <AttractionsFilter
-                setCoordinates={setCoordinates}
-                handleTypeSelect={handleRadioChange}
-                types={type}
-                chosenCity={chosenCity}
-            />
+
         </div>
     )
 }

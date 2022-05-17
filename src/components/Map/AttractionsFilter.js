@@ -57,9 +57,10 @@ function AttractionsFilter({ types, handleTypeSelect, chosenCity, setCoordinates
 
     return (
 
-        <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">What would you like to view?</FormLabel>
+        <FormControl style={{ marginTop: '5%' }}>
+            <FormLabel style={{ color: 'black' }} id="demo-radio-buttons-group-label">What would you like to view?</FormLabel>
             <RadioGroup
+                style={{}}
                 aria-labelledby="demo-radio-buttons-group-label"
                 defaultValue="female"
                 name="radio-buttons-group"

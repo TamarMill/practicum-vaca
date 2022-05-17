@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #4f74db;
 }
 
 code {
@@ -75,8 +76,4 @@ textarea:focus {
 }
 .search input:focus {
   outline: none;
-}
-#header > link {
-  background-color: aqua;
-  color: aqua;
 }

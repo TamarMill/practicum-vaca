@@ -11,8 +11,9 @@ function Container() {
     }
 
     return (
-
-        <Map />
+        <div className='container'>
+            <Map />
+        </div>
     )
 }
 export { Container };

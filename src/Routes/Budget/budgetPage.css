@@ -1,12 +1,11 @@
 .container {
   height: 100vh;
   width: 100%;
-  background-color: #aeceec48;
 }
 .form-section {
   width: 75%;
   height: auto;
-  background-color: #f5d5b1;
+  background-color: #f3cbe6;
   padding: 30px;
-  margin: auto;
+  margin: 50px;
 }

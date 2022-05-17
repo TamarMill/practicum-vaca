@@ -28,7 +28,9 @@ function Container() {
 
     return (
         <div className='container'>
-            <Search handleSearchNote={setSearchText} />
+            <div style={{ marginTop: '5%' }} >
+                <Search handleSearchNote={setSearchText} />
+            </div>
             <NotesList notes={state.notes.filter((note) => note.text.toLowerCase().includes(searchText))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
         </div>
     )

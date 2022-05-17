@@ -40,14 +40,17 @@ function Container() {
                     value={budgetName}
                     id="outlined-basic"
                     variant="outlined"
+                    style={{ backgroundColor: '#f3cbe6' }}
                 />
                 <TextField
                     placeholder='Budget Amount'
                     onChange={e => setMaxBudget(e.target.value)}
                     value={maxBudget} id="outlined-basic"
                     variant="outlined"
+                    style={{ backgroundColor: '#f3cbe6', marginLeft: '25px' }}
                 />
                 <Button
+                    style={{ backgroundColor: '#f3cbe6', color: 'black', marginLeft: '25px' }}
                     onClick={addBudget}
                     variant="contained">Add Budget
                 </Button>

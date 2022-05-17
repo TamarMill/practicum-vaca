@@ -1,9 +1,23 @@
-import Card from '@mui/material/Card';
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Appcontext } from '../../App'
 import { useContext, useState } from 'react'
+import { color } from '@mui/system';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import SendTwoToneIcon from "@mui/icons-material/Send";
+import {
 
+    IconButton,
+
+
+} from "@mui/material";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 function BudgetItem({ name, expenses, maxBudget }) {
     const [expense, setExpense] = useState('')
     const { dispatch } = useContext(Appcontext)
@@ -27,32 +41,54 @@ function BudgetItem({ name, expenses, maxBudget }) {
     }
 
     return (
+
         <div className='budget-card'>
-            <Card variant="outlined">
-
-                <h1 >{name}</h1>
-                <h5> total:{total} of {maxBudget}</h5>
-                <h5>List of Expense Amounts:</h5>
-                <h5>{expenses.map(renderExpense)}</h5>
-                <TextField
-                    placeholder='Expense Amount'
-                    onChange={e => setExpense(e.target.value)}
-                    value={expense} id="outlined-basic"
-                    variant="outlined"
-                />
-
-                <Button
-                    onClick={addExpense}
-                    variant="contained">Add Expense
-                </Button>
-                <Button
-                    onClick={deleteBudget}
-                    variant="contained">Delete Budget
-                </Button>
-
-            </Card>
+            <h5>Click anywhere on the card for more budget details</h5>
 
 
+
+            <Accordion style={{ backgroundColor: '#f5d5b1', margin: '25px' }} variant="outlined">
+                <AccordionSummary
+
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography> <h1 >{name} </h1>
+
+                        <TextField
+                            style={{ marginBotton: '50%' }}
+                            placeholder='Expense Amount'
+                            onChange={e => setExpense(e.target.value)}
+                            value={expense} id="outlined-basic"
+                            variant="outlined"
+
+                        />
+                        <div>
+                            <Button
+
+                                style={{ backgroundColor: '#f5d5b1', margin: '25px', color: 'black' }}
+                                onClick={addExpense}
+                                variant="contained" >Add Expense
+                            </Button>
+
+                        </div>
+
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+
+                        <h5 style={{ marginLeft: '75%' }}>List of Expense Amounts:</h5>
+                        <h5 style={{ marginLeft: '75%' }}>{expenses.map(renderExpense)}</h5>
+                        <h3 style={{ marginLeft: '75%' }}> total:{total} of {maxBudget}</h3>
+                        <Button
+                            style={{ marginLeft: '75%', backgroundColor: '#f5d5b1', color: 'black' }}
+                            onClick={deleteBudget}
+                            variant="contained">Delete Budget Category
+                        </Button>
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
 
 
         </div >
