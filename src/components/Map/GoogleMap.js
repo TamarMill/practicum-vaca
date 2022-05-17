@@ -1,9 +1,7 @@
 import {
     GoogleMap,
     Marker,
-    DirectionsRenderer,
-    Circle,
-    MarkerClusterer,
+
 } from "@react-google-maps/api";
 import TextField from '@mui/material/TextField';
 import './Map.css'
@@ -26,11 +24,11 @@ function Map() {
     const [locationInfoCoordinate, setLocationInfoCoordinate] = useState(null);
     const map = useRef()
     const {
-        ready,
+
         value,
         setValue,
-        suggestions: { status, data },
-        clearSuggestions,
+        suggestions: { data },
+
     } = usePlacesAutocomplete({
         requestOptions: {
             types: ['locality'],

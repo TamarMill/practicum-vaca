@@ -3,8 +3,7 @@ import usePlacesAutocomplete, {
     getLatLng,
 } from "use-places-autocomplete";
 import { useEffect } from 'react';
-import Checkbox from '@mui/material/Checkbox';
-import FormGroup from '@mui/material/FormGroup';
+
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -13,11 +12,10 @@ import FormLabel from '@mui/material/FormLabel';
 
 function AttractionsFilter({ types, handleTypeSelect, chosenCity, setCoordinates }) {
     const {
-        ready,
-        value,
+
         setValue,
-        suggestions: { status, data },
-        clearSuggestions,
+        suggestions: { data },
+
     } = usePlacesAutocomplete({
         requestOptions: {
             types: [types],
@@ -54,7 +52,7 @@ function AttractionsFilter({ types, handleTypeSelect, chosenCity, setCoordinates
             processData()
         }
 
-    }, [data])
+    }, [data, setCoordinates])
 
 
     return (
