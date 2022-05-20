@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/practicum-vaca/static/css/main.073c9b0a.css",
-    "main.js": "/practicum-vaca/static/js/main.aca6dbbc.js",
+    "main.css": "/practicum-vaca/static/css/main.fc18ffbf.css",
+    "main.js": "/practicum-vaca/static/js/main.6ce8c4ea.js",
     "static/js/787.f126219a.chunk.js": "/practicum-vaca/static/js/787.f126219a.chunk.js",
-    "static/media/logo.svg": "/practicum-vaca/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/practicum-vaca/index.html",
-    "main.073c9b0a.css.map": "/practicum-vaca/static/css/main.073c9b0a.css.map",
-    "main.aca6dbbc.js.map": "/practicum-vaca/static/js/main.aca6dbbc.js.map",
+    "main.fc18ffbf.css.map": "/practicum-vaca/static/css/main.fc18ffbf.css.map",
+    "main.6ce8c4ea.js.map": "/practicum-vaca/static/js/main.6ce8c4ea.js.map",
     "787.f126219a.chunk.js.map": "/practicum-vaca/static/js/787.f126219a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.aca6dbbc.js"
+    "static/css/main.fc18ffbf.css",
+    "static/js/main.6ce8c4ea.js"
   ]
 }
