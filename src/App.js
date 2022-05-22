@@ -5,7 +5,6 @@ import { Container as MapContainer } from './Routes/Map/Container';
 import { useReducer, createContext } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import immer from 'immer';
@@ -58,7 +57,7 @@ const App = () => {
 
       <BrowserRouter>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs style={{ backgroundColor: 'white' }} aria-label="basic tabs example">
+          <Tabs style={{ backgroundColor: 'white' }} aria-label="basic tabs example" value={1}>
             <Link to='/'><Tab label='Notes' />  </Link>
             <Link to='/budget'><Tab label='Budget Calculator' /> </Link>
             <Link to='/map'><Tab label='Map' /></Link>

@@ -31,7 +31,7 @@ function Container() {
             <div style={{ marginTop: '5%' }} >
                 <Search handleSearchNote={setSearchText} />
             </div>
-            <NotesList notes={state.notes.filter((note) => note.text.toLowerCase().includes(searchText))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
+            <NotesList notes={state.notes.filter((note) => note.text.toLowerCase().includes(searchText.toLowerCase()))} handleAddNote={addNote} handleDeleteNote={deleteNote} />
         </div>
     )
 }
