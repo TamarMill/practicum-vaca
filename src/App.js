@@ -57,7 +57,7 @@ const App = () => {
 
       <BrowserRouter>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs style={{ backgroundColor: 'white' }} aria-label="basic tabs example" value={0}>
+          <Tabs style={{ backgroundColor: 'white' }} aria-label="basic tabs example" >
             <Link to='/'><Tab label='Notes' />  </Link>
             <Link to='/budget'><Tab label='Budget Calculator' /> </Link>
             <Link to='/map'><Tab label='Map' /></Link>
