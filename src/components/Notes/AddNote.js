@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import Input from '@mui/material/Input';
 const AddNote = ({ handleAddNote }) => {
     const [noteText, setNoteText] = useState('');
     const handleChange = (event) => {
@@ -12,18 +14,19 @@ const AddNote = ({ handleAddNote }) => {
         }
     }
     return (<div className="note new">
-        <textarea
+        <Input
+            disableUnderline="true"
             rows='8'
             cols='10'
             placeholder='Type to add a new note'
             value={noteText}
             onChange={handleChange}>
-        </textarea>
+        </Input>
         <div className="note-footer">
-            <button className="save" onClick={handleSaveClick}>Save</button>
+            <Button className="save" onClick={handleSaveClick}>Save</Button>
         </div>
 
-    </div>
+    </div >
     );
 
 };
