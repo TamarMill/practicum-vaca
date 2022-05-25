@@ -13,25 +13,34 @@ function Container() {
     const { state, dispatch } = useContext(Appcontext)
     const [budgetName, setBudgetName] = useState('')
     const [maxBudget, setMaxBudget] = useState('');
-    const addBudget = () => {
-        const newBudget = {
-            name: budgetName,
-            maxBudget,
-            expenses: []
-        }
-        dispatch({ type: 'ADD_BUDGET', payload: newBudget })
 
-        setBudgetName('');
-        setMaxBudget('');
+    const addBudget = () => {
+        if (budgetName.length !== "" && budgetName.match(/[a-z]/i) && maxBudget.match(/[0-9]/i)) {
+            const newBudget = {
+                name: budgetName,
+                maxBudget,
+                expenses: [],
+                expenseDescriptions: [],
+
+            }
+            dispatch({ type: 'ADD_BUDGET', payload: newBudget })
+
+            setBudgetName('');
+            setMaxBudget('');
+        }
+
     }
 
     function renderBudgetItem(budget, index) {
-        return <BudgetItem key={index} name={budget.name} expenses={budget.expenses} maxBudget={budget.maxBudget} />
+        return <BudgetItem key={index} name={budget.name} expenses={budget.expenses} maxBudget={budget.maxBudget} expenseDescriptions={budget.expenseDescriptions} />
+
+
     }
 
 
 
     return (
+
         <div className='container'>
             <div className='form-section'>
                 <TextField

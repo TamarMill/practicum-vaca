@@ -57,20 +57,22 @@ function AttractionsFilter({ types, handleTypeSelect, chosenCity, setCoordinates
 
     return (
 
-        <FormControl style={{ marginTop: '5%' }}>
-            <FormLabel style={{ color: 'black' }} id="demo-radio-buttons-group-label">What would you like to view?</FormLabel>
-            <RadioGroup
-                style={{}}
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="female"
-                name="radio-buttons-group"
-                onChange={handleTypeSelect}
-            >
-                <FormControlLabel value="lodging" control={<Radio />} label="Lodging" />
-                <FormControlLabel value="cafe" control={<Radio />} label="Cafe" />
-                <FormControlLabel value="museum" control={<Radio />} label="Museum" />
-            </RadioGroup>
-        </FormControl>
+        <div style={{ marginRight: '50px' }}>
+            <FormControl style={{ marginTop: '5%' }}>
+                <FormLabel style={{ color: 'black' }} id="demo-radio-buttons-group-label"><h5>What would you like to view?</h5></FormLabel>
+                <RadioGroup
+                    style={{}}
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                    onChange={handleTypeSelect}
+                >
+                    <FormControlLabel value="lodging" control={<Radio />} label="Lodging" />
+                    <FormControlLabel value="cafe" control={<Radio />} label="Cafe" />
+                    <FormControlLabel value="museum" control={<Radio />} label="Museum" />
+                </RadioGroup>
+            </FormControl>
+        </div>
     )
 
 }

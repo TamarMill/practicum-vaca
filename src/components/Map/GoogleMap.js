@@ -81,22 +81,25 @@ function Map() {
     }
     return (
         <div >
-            <div style={{ backgroundColor: '#f3cbe6', padding: '5%', margin: '5%' }}>
-                <h5>Search for and Select a Location</h5>
+            <div style={{ backgroundColor: '#f3cbe6', paddingLeft: '5%', paddingRight: '5%', paddingTop: '5%', paddingBottom: '10%', margin: '2%', marginBottom: '10px' }}>
+                <div style={{ display: 'inline-block ' }}>
+                    <h5>Search for and Select a Location</h5>
 
-                <TextField value={value} onChange={e => setValue(e.target.value)} />
+                    <TextField value={value} onChange={e => setValue(e.target.value)} />
 
-                {filterCities.map(renderCityOptions)}
-                <div></div>
-                <AttractionsFilter
+                    {filterCities.map(renderCityOptions)}
+                </div>
+                <div style={{ display: 'inline-block', marginLeft: '225px', position: 'absolute' }}>
+                    <AttractionsFilter
 
-                    setCoordinates={setCoordinates}
-                    handleTypeSelect={handleRadioChange}
-                    types={type}
-                    chosenCity={chosenCity}
-                />
+                        setCoordinates={setCoordinates}
+                        handleTypeSelect={handleRadioChange}
+                        types={type}
+                        chosenCity={chosenCity}
+                    />
+                </div>
             </div>
-            <div style={{ height: 500, width: 500, marginLeft: '20%' }}>
+            <div style={{ height: 700, width: 700, marginLeft: '10%' }}>
                 <GoogleMap
                     onLoad={googleMap => map.current = googleMap}
                     mapContainerClassName='map-container'
