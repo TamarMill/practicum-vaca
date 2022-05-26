@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/practicum-vaca/static/css/main.fc18ffbf.css",
-    "main.js": "/practicum-vaca/static/js/main.2db053ad.js",
+    "main.js": "/practicum-vaca/static/js/main.57cbfe23.js",
     "static/js/787.f126219a.chunk.js": "/practicum-vaca/static/js/787.f126219a.chunk.js",
     "index.html": "/practicum-vaca/index.html",
     "main.fc18ffbf.css.map": "/practicum-vaca/static/css/main.fc18ffbf.css.map",
-    "main.2db053ad.js.map": "/practicum-vaca/static/js/main.2db053ad.js.map",
+    "main.57cbfe23.js.map": "/practicum-vaca/static/js/main.57cbfe23.js.map",
     "787.f126219a.chunk.js.map": "/practicum-vaca/static/js/787.f126219a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc18ffbf.css",
-    "static/js/main.2db053ad.js"
+    "static/js/main.57cbfe23.js"
   ]
 }
