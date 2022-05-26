@@ -30,18 +30,17 @@ function BudgetItem({ name, expenses, maxBudget, expenseDescriptions }) {
         total += parseInt(expenses[i]);
     }
     function addExpense() {
-        if (expense != "" && expense.match(/[0-9]/i)) {
+        if (expense !== "" && expense.match(/[0-9]/i) && expenseDescription !== "") {
             dispatch({ type: 'ADD_EXPENSE', payload: { chosenCategory: name, expense } })
             setExpense('')
-        }
-        if (expenseDescription != "") {
+
+
             dispatch({ type: 'ADD_EXPENSE_DESCRIPTION', payload: { chosenCategory: name, expenseDescription } })
             setExpenseDescription('')
+
         }
     }
-    function addExpenseDescription() {
 
-    }
     function deleteBudget() {
         dispatch({ type: 'DELETE_EXPENSE', payload: name })
     }
@@ -96,15 +95,7 @@ function BudgetItem({ name, expenses, maxBudget, expenseDescriptions }) {
 
                             </div>
                         </div>
-                        {/* <div>
-                            <Button
 
-                                style={{ backgroundColor: '#f5d5b1', margin: '25px', color: 'black' }}
-                                onClick={addExpenseDescription}
-                                variant="contained" >Add Expense Description
-                            </Button>
-
-                        </div> */}
                         <div style={{ paddingBottom: '2px', display: 'inline-block' }}>
 
                             <div>
@@ -121,12 +112,12 @@ function BudgetItem({ name, expenses, maxBudget, expenseDescriptions }) {
                             </div>
                         </div>
 
-                        <div style={{ display: 'inline-block', marginLeft: '225px' }} >
-                            <h3 style={{ marginBottom: '5%', marginRight: '25%' }}> Total: {total} of {maxBudget}</h3>
+                        <div style={{ display: 'inline-block', marginLeft: '284px' }} >
+                            <h3 style={{ marginBottom: '5%' }}> Total: {total} of {maxBudget}</h3>
 
 
                             <Button
-                                style={{ marginRight: '25%', backgroundColor: '#f5d5b1', color: 'black' }}
+                                style={{ backgroundColor: '#f5d5b1', color: 'black' }}
                                 onClick={deleteBudget}
                                 variant="contained">Delete Budget Category
                             </Button>

@@ -99,7 +99,7 @@ function Map() {
                     />
                 </div>
             </div>
-            <div style={{ height: 700, width: 700, marginLeft: '10%' }}>
+            <div style={{ height: '800px', width: '800px', margin: 'auto' }}>
                 <GoogleMap
                     onLoad={googleMap => map.current = googleMap}
                     mapContainerClassName='map-container'
